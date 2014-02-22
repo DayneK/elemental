@@ -8,10 +8,7 @@ You make up quarks and down quarks in order to make protons and neutrons, you ca
 After life I wanted the layers to continue perhaps with feudalism (like making barracks and castles and stuff) to globalization (making businesses or something) colonization of outer space, and then something involving the creation/destruction of the universe in the last layer that lets you rebirth.
 
 So its like:
-particles -> atoms -> molecules -> macromolecules -> organic matter -> lifeforms -> early society -> feudalism -> etc
-															  -> inorganic matter -> objects -> tools -> industrial?
-															  -> something else?
-															  
+particles -> atoms -> molecules -> macromolecules -> organic matter -> lifeforms -> early society -> feudalism -> etc						  
 Functions needed in the game are generators for everything, one or preferably a few upgrades for everythings generators, and then a bunch of universal upgrades that increase production and provide other features to gameplay, like better monitoring of statistics and easier production of large amounts of items. Also a scoring and/or levelling system that works with an unlocking system so that you progress through the game, playing a few layers at once and and designed so that you "complete" the first few layers after your production of a resource reaches such a point that you are able to afford an upgrade that automates the production of the first layer to allow you to focus on the 2nd, 3rd and 4th, another upgrade to automate the second.
 
 I'm going to try to summarize this and do up a list of planned or considered content, the game is going to be open source and anybody that wishes to help can be compensated if the game ever generates some form of revenue, perhaps through an ad.
