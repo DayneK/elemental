@@ -1,0 +1,31 @@
+var nitrogen1gens = 0; var nitrogen1genlvl = 1; var nitrogen1gencost = 10; var nitrogen1genps = 0;
+
+function nitrogen1auto(){
+	if(protons >= ((nitrogen1gens*nitrogen1genlvl)*7) && neutrons >= ((nitrogen1gens*nitrogen1genlvl)*7) && electrons >= ((nitrogen1gens*nitrogen1genlvl)*7)){
+				nitrogen1s = nitrogen1s + nitrogen1gens*nitrogen1genlvl;
+				protons = protons - ((nitrogen1gens*nitrogen1genlvl)*7);
+				neutrons = neutrons - ((nitrogen1gens*nitrogen1genlvl)*7);
+				electrons = electrons - ((nitrogen1gens*nitrogen1genlvl)*7);
+				document.getElementById('nitrogen1s').innerHTML = nitrogen1s;
+				document.getElementById('protons').innerHTML = protons;
+				document.getElementById('neutrons').innerHTML = neutrons;
+				document.getElementById('electrons').innerHTML = electrons;
+	}
+}
+
+function buynitrogen1gen(){
+    var nitrogen1gencost = Math.floor(10 * Math.pow(1.025,nitrogen1gens));
+    if(nitrogen1s >= nitrogen1gencost){
+        nitrogen1gens++;
+        nitrogen1s = nitrogen1s - nitrogen1gencost;
+        document.getElementById('nitrogen1gens').innerHTML = nitrogen1gens;
+        document.getElementById('nitrogen1s').innerHTML = nitrogen1s;
+    }
+    var nextcost = Math.floor(10 * Math.pow(1.025,nitrogen1gens));
+    document.getElementById('nitrogen1gencost').innerHTML = nextcost;
+}
+
+	var nitrogen1genps = nitrogen1gens*nitrogen1genlvl;
+    document.getElementById('nitrogen1genps').innerHTML = nitrogen1genps;
+
+<button onclick="buynitrogen1gen()" type="button" class="btn btn-small btn-inverse btn-block">Nitrogen-1 <span id="nitrogen1gens" class="badge">0</span> Cost: <span id="nitrogen1gencost">10</span></button>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Elemental</title>
+  <meta name="author" content="Dayne Keefe">
+  <link rel="shortcut icon" href="./img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="interface.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/customtabs.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="span4"><p class="text-center">Subatomic Particles</p>
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#fpcreate" data-toggle="tab"><img src="./img/glyphicons/glyphicons_432_plus.png"></img></a></li>
+		<li><a href="#fpgenerate" data-toggle="tab"><img src="./img/glyphicons/glyphicons_085_repeat.png"></img></a></li>
+		<li><a href="#fpinfo" data-toggle="tab"><img src="./img/glyphicons/glyphicons_040_stats.png"></img></a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="fpcreate">
+		<u><b>Manual Creation</b></u><br>
+			<u>Fundamental Particles:</u><br><b>Quarks:</b><br><div class="btn-group-vertical btn-block">
+			<button id="upquarkclick" onclick="upquarkclick()" onmouseover="$('#upquarkclick').popover('show')" onmouseout="$('#upquarkclick').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="right" data-html="true" data-content="
+			<b><u>Up Quark</u></b><br>
+			<b>Mass:</b> ~2.3MeV/c<sup>2</sup> <b>Charge:</b> 2/3 <b>Spin:</b> 1/3<br>
+			<b>First Theorized:</b> 1964<br><b>Theorists:</b> Murray Gell-Mann and George Zweig<br>
+			<b>Discovery Date:</b> 1968<br><b>Discoverer:</b> Stanford Linear Accelerator Center (SLAC)">Up <span id="upquarks" class="badge">0</span></button>
+			
+			<button id="downquarkclick" onclick="downquarkclick()" onmouseover="$('#downquarkclick').popover('show')" onmouseout="$('#downquarkclick').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="right" data-html="true" data-content="
+			<b><u>Down Quark</u></b><br>
+			<b>Mass:</b> ~4.8MeV/c<sup>2</sup> <b>Charge:</b> -1/3 <b>Spin:</b> 1/2<br>
+			<b>First Theorized:</b> 1964<br><b>Theorists:</b> Murray Gell-Mann and George Zweig<br>
+			<b>Discovery Date:</b> 1968<br><b>Discoverer:</b> Stanford Linear Accelerator Center (SLAC)">Down <span id="downquarks" class="badge">0</span></button>
+			
+			</div><b>Leptons:</b><br>
+			<button id="electronclick" onclick="electronclick()" onmouseover="$('#electronclick').popover('show')" onmouseout="$('#electronclick').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="right" data-html="true" data-content="
+			<b><u>Electron</u></b><br>
+			<b>Mass:</b> 0.511MeV/c<sup>2</sup> <b>Charge:</b> -1 <b>Spin:</b> 1/2<br>
+			<b>First Theorized:</b> 1838-51<br><b>Theorists:</b> Richard Laming<br>
+			<b>Discovery Date:</b> 1897<br><b>Discoverer:</b> J.J. Thomson">Electron <span id="electrons" class="badge">0</span></button><br>
+			
+			<u>Subatomic Particles:</u><br><div class="btn-group-vertical btn-block">
+			<button id="protonclick" onclick="protonclick()" onmouseover="$('#protonclick').popover('show')" onmouseout="$('#protonclick').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="right" data-html="true" data-content="
+			<b><u>Proton</u></b><br>
+			<b>Components:</b> 2 Up Quarks, 1 Down Quark<br>
+			<b>Mass:</b> 938.27MeV/c<sup>2</sup> <b>Charge:</b> 1 <b>Spin:</b> 1/2<br>
+			<b>First Theorized:</b> 1815<br><b>Theorists:</b> William Prout<br>
+			<b>Discovery Date:</b> 1917-19<br><b>Discoverer:</b> Ernest Rutherford">Proton <span id="protons" class="badge">0</span></button>
+			
+			<button id="neutronclick" onclick="neutronclick()" onmouseover="$('#neutronclick').popover('show')" onmouseout="$('#neutronclick').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="right" data-html="true" data-content="
+			<b><u>Proton</u></b><br>
+			<b>Components:</b> 1 Up Quark, 2 Down Quarks<br>
+			<b>Mass:</b> 939.56MeV/c<sup>2</sup> <b>Charge:</b> 0 <b>Spin:</b> 1/2<br>
+			<b>First Theorized:</b> 1920<br><b>Theorists:</b> Ernest Rutherford<br>
+			<b>Discovery Date:</b> 1932<br><b>Discoverer:</b> James Chadwick">Neutron <span id="neutrons" class="badge">0</span></button>
+			
+			</div></div>
+		<div class="tab-pane" id="fpgenerate">	
+		<u><b>Automatic Generation</b></u><br>
+			<u>Fundamental Particles:</u><br><b>Quarks:</b><br><div class="btn-group-vertical btn-block">
+			<button onclick="buyupquarkgen()" type="button" class="btn btn-small btn-inverse btn-block">Up <span id="upquarkgens" class="badge">0</span> Cost: <span id="upquarkgencost">10</span></button>
+			<button onclick="buydownquarkgen()" type="button" class="btn btn-small btn-inverse btn-block">Down <span id="downquarkgens" class="badge">0</span> Cost: <span id="downquarkgencost">10</span></button>
+			</div><b>Leptons:</b><br><button onclick="buyelectrongen()" type="button" class="btn btn-small btn-inverse btn-block">Electron <span id="electrongens" class="badge">0</span> Cost: <span id="electrongencost">10</span></button><br>
+			<u>Atom Components:</u><br><div class="btn-group-vertical btn-block">
+			<button onclick="buyprotongen()" type="button" class="btn btn-small btn-inverse btn-block">Proton <span id="protongens" class="badge">0</span> Cost: <span id="protongencost">10</span></button>
+			<button onclick="buyneutrongen()" type="button" class="btn btn-small btn-inverse btn-block">Neutron <span id="neutrongens" class="badge">0</span> Cost: <span id="neutrongencost">10</span></button>
+			</div></div>
+		<div class="tab-pane" id="fpinfo">
+		<u><b>Generation Information</b></u><br>
+			<u>Fundamental Particles:</u><br><b>Quarks:</b><br>
+			Ups p/s: <span id="upquarkgenps">0</span><br>
+			Downs p/s: <span id="downquarkgenps">0</span><br>
+			<b>Leptons:</b><br>
+			Electrons p/s: <span id="electrongenps">0</span><br><br>
+			<u>Atom Components:</u><br>
+			Protons p/s: <span id="protongenps">0</span><br>
+			Neutrons p/s: <span id="neutrongenps">0</span><br>
+		</div></div></div>
+		
+	<div class="span4"><p class="text-center">Atoms</p>
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#acreate" data-toggle="tab"><img src="./img/glyphicons/glyphicons_432_plus.png"></img></a></li>
+		<li><a href="#agenerate" data-toggle="tab"><img src="./img/glyphicons/glyphicons_085_repeat.png"></img></a></li>
+		<li><a href="#ainfo" data-toggle="tab"><img src="./img/glyphicons/glyphicons_040_stats.png"></img></a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="acreate">
+		<b><u>Manual Creation:</u></b><br>
+		<div class="btn-group-vertical btn-block">
+			<button id="hydrogen1click" onclick="hydrogen1click()" onmouseover="$('#hydrogen1click').popover('show')" onmouseout="$('#hydrogen1click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="bottom" data-html="true" data-content="
+			<b><u>Hydrogen-1 (Protium)</u></b><br>
+			<b>Protons/Electrons:</b> 1 <b>Neutrons:</b> 0<br>
+			<b>Category:</b> Diatomic nonmetal <b>Half-life:</b> Stable<br>
+			<b>Atomic Weight:</b> 1.007940 u<br>
+			<b>Electron Configuration:</b> 1s<sup>1</sup>, 1<br>
+			<b>Discovery:</b> Henry Cavendish (1766)<br>
+			<b>First Isolation:</b> ">Hydrogen-1 <span id="hydrogen1s" class="badge">0</span></button>
+			
+			<button id="helium4click" onclick="helium4click()" onmouseover="$('#helium4click').popover('show')" onmouseout="$('#helium4click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="bottom" data-html="true" data-content="
+			<b><u>Helium-4</u></b><br>
+			<b>Protons/Electrons:</b> 1 <b>Neutrons:</b> 0<br>
+			<b>Category:</b> Noble gases <b>Half-life:</b> Stable<br>
+			<b>Atomic Weight:</b> 4.002602 u<br>
+			<b>Electron Configuration:</b> 1s<sup>2</sup>, 2<br>
+			<b>Discovery:</b> Pierre Janssen, Norman Lockyer (1868)<br>
+			<b>First Isolation:</b> William Ramsay, Per Teodor Cleve, Abraham Langlet (1895)">Helium-4 <span id="helium4s" class="badge">0</span></button>
+			
+			<button id="lithium7click" onclick="lithium7click()" onmouseover="$('#lithium7click').popover('show')" onmouseout="$('#lithium7click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="bottom" data-html="true" data-content="
+			<b><u>Lithium-7</u></b><br>
+			<b>Protons/Electrons:</b> 3 <b>Neutrons:</b> 4<br>
+			<b>Category:</b> Alkali metal <b>Half-life:</b> Stable<br>
+			<b>Atomic Weight:</b> 6.94 u<br>
+			<b>Electron Configuration:</b> [HE] 2s<sup>1</sup>, 2, 1<br>
+			<b>Discovery:</b> Johan August Arfwedson (1817)<br>
+			<First Isolation:</b> William Thomas Brande (1821)">Lithium-7 <span id="lithium7s" class="badge">0</span></button>
+			
+			<button id="beryllium9click" onclick="beryllium9click()" onmouseover="$('#beryllium9click').popover('show')" onmouseout="$('#beryllium9click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="bottom" data-html="true" data-content="
+			<b><u>Beryllium-9</u></b><br>
+			<b>Protons/Electrons:</b> 4 <b>Neutrons:</b> 5<br>
+			<b>Category:</b> Alkaline earth metal <b>Half-life:</b> Stable<br>
+			<b>Atomic Weight:</b> 9.0121831 u<br>
+			<b>Electron Configuration:</b> [HE] 2s<sup>2</sup>, 2, 2<br>
+			<b>Discovery:</b> Louis Nicolas Vauquelin (1797)<br>
+			<b>First Isolation:</b> Friedrich Wöhler, Antoine Bussy (1828)">Beryllium-9 <span id="beryllium9s" class="badge">0</span></button>
+			
+			<button id="boron1click" onclick="boron1click()" onmouseover="$('#boron1click').popover('show')" onmouseout="$('#boron1click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="left" data-html="true" data-content="Make a Boron-1 atom from 5 protons, 6 neutrons and 5 electrons.">Boron-1 <span id="boron1s" class="badge">0</span></button>
+			<button id="carbon1click" onclick="carbon1click()" onmouseover="$('#carbon1click').popover('show')" onmouseout="$('#carbon1click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="left" data-html="true" data-content="Make a Carbon-1 atom from 6 protons, 6 neutrons and 6 electrons.">Carbon-1 <span id="carbon1s" class="badge">0</span></button>
+			<button id="nitrogen1click" onclick="nitrogen1click()" onmouseover="$('#nitrogen1click').popover('show')" onmouseout="$('#nitrogen1click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="left" data-html="true" data-content="Make a Nitrogen-1 atom from 7 protons, 7 neutrons and 7 electrons.">Nitrogen-1 <span id="nitrogen1s" class="badge">0</span></button>
+			<button id="oxygen1click" onclick="oxygen1click()" onmouseover="$('#oxygen1click').popover('show')" onmouseout="$('#oxygen1click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="left" data-html="true" data-content="Make an Oxygen-1 atom from a 8 protons, 8 neutrons and 8 electrons.">Oxygen-1 <span id="oxygen1s" class="badge">0</span></button>
+			<button id="fluorine1click" onclick="fluorine1click()" onmouseover="$('#fluorine1click').popover('show')" onmouseout="$('#fluorine1click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="left" data-html="true" data-content="Make a Fluorine-1 atom from 9 protons, 10 neutrons and 9 electrons.">Fluorine-1 <span id="fluorine1s" class="badge">0</span></button>
+			<button id="neon1click" onclick="neon1click()" onmouseover="$('#neon1click').popover('show')" onmouseout="$('#neon1click').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="left" data-html="true" data-content="Make a Neon-1 atom from 10 protons, 10 neutrons and 10 electrons.">Neon-1 <span id="neon1s" class="badge">0</span></button>
+		</div>
+	</div>
+		<div class="tab-pane" id="agenerate">
+		<b><u>Automatic Generation:</u></b><br>
+			<div class="btn-group-vertical btn-block">
+			<button onclick="buyhydrogen1gen()" type="button" class="btn btn-small btn-inverse btn-block">Hydrogen-1 <span id="hydrogen1gens" class="badge">0</span> Cost: <span id="hydrogen1gencost">10</span></button>
+			<button onclick="buyhelium4gen()" type="button" class="btn btn-small btn-inverse btn-block">Helium-4 <span id="helium4gens" class="badge">0</span> Cost: <span id="helium4gencost">10</span></button>
+			<button onclick="buylithium7gen()" type="button" class="btn btn-small btn-inverse btn-block">Lithium-7 <span id="lithium7gens" class="badge">0</span> Cost: <span id="lithium7gencost">10</span></button>
+			<button onclick="buyberyllium9gen()" type="button" class="btn btn-small btn-inverse btn-block">Beryllium-9 <span id="beryllium9gens" class="badge">0</span> Cost: <span id="beryllium9gencost">10</span></button>
+			<button onclick="buyboron1gen()" type="button" class="btn btn-small btn-inverse btn-block">Boron-1 <span id="boron1gens" class="badge">0</span> Cost: <span id="boron1gencost">10</span></button>
+			<button onclick="buycarbon1gen()" type="button" class="btn btn-small btn-inverse btn-block">Carbon-1 <span id="carbon1gens" class="badge">0</span> Cost: <span id="carbon1gencost">10</span></button>
+			<button onclick="buynitrogen1gen()" type="button" class="btn btn-small btn-inverse btn-block">Nitrogen-1 <span id="nitrogen1gens" class="badge">0</span> Cost: <span id="nitrogen1gencost">10</span></button>
+			<button onclick="buyoxygen1gen()" type="button" class="btn btn-small btn-inverse btn-block">Oxygen-1 <span id="oxygen1gens" class="badge">0</span> Cost: <span id="oxygen1gencost">10</span></button>
+			<button onclick="buyfluorine1gen()" type="button" class="btn btn-small btn-inverse btn-block">Fluorine-1 <span id="fluorine1gens" class="badge">0</span> Cost: <span id="fluorine1gencost">10</span></button>
+			<button onclick="buyneon1gen()" type="button" class="btn btn-small btn-inverse btn-block">Neon-1 <span id="neon1gens" class="badge">0</span> Cost: <span id="neon1gencost">10</span></button>
+		</div></div>
+		<div class="tab-pane" id="ainfo">
+		<u><b>Generation Information</b></u><br>
+			Hydrogen-1 Atoms p/s: <span id="hydrogen1genps">0</span>
+	</div></div></div>
+	
+	<div class="span4"><p class="text-center">Molecules</p>
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#mcreate" data-toggle="tab"><img src="./img/glyphicons/glyphicons_432_plus.png"></img></a></li>
+		<li><a href="#mgenerate" data-toggle="tab"><img src="./img/glyphicons/glyphicons_085_repeat.png"></img></a></li>
+		<li><a href="#minfo" data-toggle="tab"><img src="./img/glyphicons/glyphicons_040_stats.png"></img></a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="mcreate">
+		<div class="btn-group-vertical btn-block">
+			<button id="h2oclick" onclick="h2oclick()" onmouseover="$('#h2oclick').popover('show')" onmouseout="$('#h2oclick').popover('hide')" type="button" class="btn btn-small btn-inverse btn-block" data-container="body" data-placement="left" data-html="true" data-content="Make a H2O molecule from 2 hydrogen atoms and 1 oxygen atom.">Water (H2O) <span id="h2os" class="badge">0</span></button>
+		</div>
+	</div>
+		<div class="tab-pane" id="mgenerate">
+			<button onclick="buyh20gen()" type="button" class="btn btn-small btn-inverse btn-block">H20 <span id="h20gens" class="badge">0</span> Cost: <span id="h20gencost">10</span></button>
+		</div>
+		<div class="tab-pane" id="minfo">
+	Minfo
+	</div></div></div>
+</div>
+</body>
+</html>
